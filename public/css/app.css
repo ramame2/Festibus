@@ -1243,7 +1243,7 @@ a.btn-link:hover {
 }
 
 .festival-item img {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 10px 10px 0 0;
 }
@@ -1913,7 +1913,7 @@ text-align: center;
     }
 
     .festival-item {
-        width: 100%; /* Ensure festival items take full width */
+        width: 80%;
         margin-bottom: 15px;
     }
 
