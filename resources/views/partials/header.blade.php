@@ -28,6 +28,8 @@
                 </form>
 
             @else
+                <p class="welcome-message" style="text-decoration: none;">Welkom!<br>
+                </p>
                 <a href="{{ route('register') }}">{{ __('Register') }}</a>
                     <a href="{{ route('login') }}">{{ __('Inloggen') }}</a>
 

@@ -6,7 +6,7 @@
 
     <div class="profile_container">
 
-        <h2>Welkom, {{ auth()->user()->name }}!</h2>
+        <h2>Welkom, {{ optional(auth()->user())->name }}!</h2>
         <a href="{{ route('user.edit', $user->id) }}" class="buttons">Beheer uw account</a>
         <h3>Uw boekingen</h3>
         @if($bookings->isEmpty())
