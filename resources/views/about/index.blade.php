@@ -52,7 +52,7 @@
     <!-- About Section -->
     <div class="about-section" id="aboutSection">
         <h1>Over ons</h1>
-        <p><strong>Phone:</strong> {{ $aboutInfo->phone }}</p>
+        <p><strong>Tel:</strong> {{ $aboutInfo->phone }}</p>
         <p><strong>Locatie:</strong> {{ $aboutInfo->location }}</p>
         <p><strong>E-mail:</strong> {{ $aboutInfo->email }}</p>
 
