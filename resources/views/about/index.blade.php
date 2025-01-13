@@ -59,14 +59,17 @@
         <h3>Openingstijden</h3>
 
         @if(is_array($opening_hours) && count($opening_hours) > 0)
-            <li>
+            <table class="table_profile">
+
+                <tbody>
                 @foreach($opening_hours as $day => $hours)
-                    <div style=" gap: 2px;">
-                        <strong>{{ ucfirst($day) }}:</strong>
-                        <span style="margin-left: 10px;">{{ $hours }}</span>
-                    </div>
+                    <tr>
+                        <td >{{ ucfirst($day) }}</td>
+                        <td >{{ $hours }}</td>
+                    </tr>
                 @endforeach
-            </li>
+                </tbody>
+            </table>
         @else
             <p>No opening hours available.</p>
         @endif

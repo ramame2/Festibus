@@ -199,9 +199,7 @@ body {
 
 .container {
     width: 100%;
-    margin: 10px auto;
-    padding: 10px;
-    box-sizing: border-box;
+    margin: 40px auto;
 }
 
 
@@ -1957,7 +1955,7 @@ text-align: center;
     /* Footer en Link Stijlen */
 
    .footer-container {
-        width: 100%;
+       position: fixed;
        height: auto;
        justify-content: center;
        flex-direction: column;
@@ -1974,15 +1972,20 @@ text-align: center;
         margin: 10px 10px;
     }
 
-    footer .footer-links a,
-    footer .social-media a {
+    footer .footer-links a {
         color: #0c0a0a;
         font-family: Cambria, serif;
-        font-size: 10px;
+        font-size: 12px;
         display: flex;
         align-items: center;
     }
-
+    footer .social-media a {
+        color: #0909d8;
+        font-family: Cambria, serif;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
     /* Kleine ruimte tussen de iconen en de tekst */
     footer .footer-links a i {
         margin-right: 1px;

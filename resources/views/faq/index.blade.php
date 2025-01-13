@@ -19,7 +19,9 @@
         <tr>
             <th>Vraag</th>
             <th>Antwoord</th>
+            @if(auth()->check() && auth()->user()->role === 'admin')
             <th>Bewerken</th>
+            @endif
 
 
         </tr>
@@ -59,5 +61,5 @@
         @endif
 
         <p>Als u nog vragen hebt, stuur deze dan via de <a href="../contact">contactpagina</a>, en we beantwoorden u graag binnen 5 werkdagen.</p> </div>
-
+<br><br>
 @endsection
