@@ -186,22 +186,24 @@ h5 {
     font-size: 1.2rem;
     color: #f3ecec;
 }
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 body {
     font-family: Calibri, serif;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    width: 100%;
+}
+main{
+    flex: 1;
 }
 
 .container {
     width: 100%;
     margin: 40px auto;
 }
-
 
 .container-home {
     flex-direction: row;
@@ -221,8 +223,6 @@ header {
     color: #0c0a0a;
     padding: 10px 0;
     align-items: center;
-    position: relative;
-    width: 100%;
     z-index: 1000;
     display: flex;
     border-radius: 10px;
@@ -394,7 +394,14 @@ nav {
     margin-bottom: 20px;
 }
 /* Footer section */
+footer {
+    position: relative;
+    top: 10%;
+    width: 100%;
+
+}
 .footer-container {
+    position: relative;
     background-color: rgba(255, 205, 2, 0.25);
     color: #fbf9f9;
     width: 100%;
@@ -405,7 +412,7 @@ nav {
     justify-content: space-between;
     margin-top: auto;
     align-content: center;
-    position: static;
+    z-index: 1000;
     bottom: 0;
 }
 
@@ -716,8 +723,7 @@ a.btn-link:hover {
     color: #dc3545;
 }
 
-/* register */
-/* General body styles */
+
 
 /* Registration form container */
 .reg-container {
@@ -1734,15 +1740,6 @@ text-align: center;
 @media screen and (max-width: 768px) {
 
 
-    body {
-        font-family: Calibri, sans-serif;
-        background-color: rgba(248, 249, 250, 0.75);
-        margin: 0;
-        padding: 0;
-        display: block;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
 
     /* Container styles */
     .container-home {
@@ -1808,7 +1805,6 @@ text-align: center;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        background-color: #fbf9f9;
     }
 
     header .logo {
@@ -1955,10 +1951,10 @@ text-align: center;
     /* Footer en Link Stijlen */
 
    .footer-container {
-       position: fixed;
        height: auto;
        justify-content: center;
        flex-direction: column;
+       position:fixed;
     }
 
     footer .footer-links {
