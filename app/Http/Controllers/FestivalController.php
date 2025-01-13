@@ -64,7 +64,7 @@ class FestivalController extends Controller
         $festival->beschrijving = $request->beschrijving;
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('festivals', 'public');
+            $imagePath = $request->file('image')->store('images', 'public');
             $festival->image = $imagePath;
         }
 
