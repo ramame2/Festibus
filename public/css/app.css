@@ -1647,7 +1647,7 @@ text-align: center;
     justify-self: center;
     justify-items: center;
     border-collapse: collapse;
-    border-radius: 10px;
+    border-radius: 3px;
     margin: 20px auto;
     font-family: Arial, sans-serif;
     overflow-x: auto;
@@ -1658,17 +1658,15 @@ text-align: center;
 .table_profile th {
     background-color: rgba(143, 216, 146, 0.52);
     color: #04101d;
-    padding: 12px;
-    text-align: left;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 14px;
     border: 1px solid #04101d;
     font-family: Calibri, serif;
 }
 
 /* Table rows */
 .table_profile td {
-    padding: 12px;
-    text-align: left;
+    padding: 10px;
     border: 1px solid #ddd;
     font-size: 14px;
     font-family: Calibri, serif;
@@ -1714,7 +1712,7 @@ text-align: center;
     margin: 20px 0;
 }
 /* Cancel button style */
-.table_profile .btn-danger {
+ .btn-danger {
     background-color: #dc3545;
     border: none;
     color: white;
@@ -1723,7 +1721,7 @@ text-align: center;
     font-size: 14px;
 }
 
-.table_profile .btn-danger:hover {
+.btn-danger:hover {
     background-color: #c82333;
 }
 
@@ -1954,9 +1952,6 @@ text-align: center;
         font-size: 12px;
     }
 
-    .table_profile th, .table_profile td {
-        padding: 8px;
-    }
 
 
     /* Footer en Link Stijlen */
@@ -2039,25 +2034,18 @@ text-align: center;
     .table_profile {
         width: 100%;
         border-collapse: collapse;
-        margin: 20px 0;
         font-family: Arial, sans-serif;
     }
 
     /* Table header */
     .table_profile th {
-        background-color: rgba(143, 216, 146, 0.52);
-        color: #04101d;
         padding: 1px;
-        text-align: left;
-        font-size: 9px;
-        border: 1px solid #04101d;
-        font-family: Calibri, serif;
+        font-size: 8px;
     }
 
     /* Table rows */
     .table_profile td {
-        padding: 12px;
-        text-align: left;
+        padding: 2px;
         border: 1px solid #ddd;
         font-size: 8px;
         font-family: Calibri, serif;
@@ -2065,11 +2053,11 @@ text-align: center;
 
      .btn-danger {
         background-color: #dc3545;
+         padding: 1px 1px;
         border: none;
         color: white;
-        padding: 5px 6px;
         cursor: pointer;
-        font-size: 8px;
+        font-size: 6px;
     }
 }
 @media screen and (max-width: 480px) {

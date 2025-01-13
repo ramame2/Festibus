@@ -3,16 +3,15 @@
 @section('title', 'FAQ')
 @section('content')
     <div class="profile_container">
-    <div class="search-container">
         <h2>FAQ</h2>
 
 
 
         <form method="GET" action="{{ route('faq.index') }}">
-        <input type="text" name="search" placeholder="Zoek FAQs" value="{{ request('search') }}">
+        <input type="text" id="search-input" name="search" placeholder="Zoek FAQs" value="{{ request('search') }}">
 
         <button type="submit">Zoek</button>
-    </form>
+        </form>
 
     <!-- FAQ List -->
     <table class="table_profile">
@@ -20,6 +19,7 @@
         <tr>
             <th>Vraag</th>
             <th>Antwoord</th>
+            <th>Bewerken</th>
 
 
         </tr>
@@ -57,7 +57,7 @@
                 <a href="{{ route('faq.create') }}" class="buttons">Voeg nieuwe FAQ toe</a>
             </div>
         @endif
-    </div>
+
         <p>Als u nog vragen hebt, stuur deze dan via de <a href="../contact">contactpagina</a>, en we beantwoorden u graag binnen 5 werkdagen.</p> </div>
 
 @endsection

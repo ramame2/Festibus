@@ -25,9 +25,9 @@
                 <tr>
                     <th>Vertrek</th>
                     <th>Bestemming</th>
-                    <th>Vertrekdatum</th>
+                    <th>Datum</th>
                     <th>Vertrektijd</th>
-                    <th>Aantal personen</th>
+                    <th>Aantal</th>
                     <th>Tickets prijs</th>
                     <th>Beheren</th>
                 </tr>
