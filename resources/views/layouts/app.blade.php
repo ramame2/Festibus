@@ -9,10 +9,6 @@
     <link rel="icon" href="{{ asset('images/fff.jpg') }}" >
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('node_modules/admin-lte/dist/css/adminlte.min.css') }}">
-    <script src="{{ asset('node_modules/admin-lte/dist/js/adminlte.min.js') }}"></script>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
@@ -48,13 +44,12 @@
     <x-breadcrumb :links="$breadcrumbs" />
 
 @endif
-<div class="container" >
+<main class="container" >
     @yield('content')
-</div>
 
-
-
+</main>
+@include('components.footer')
 
 </body>
-@include('components.footer')
+
 </html>
