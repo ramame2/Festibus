@@ -21,7 +21,7 @@ class AboutInfoSeeder extends Seeder
 
         // Seed the AboutInfo table with actual data
         AboutInfo::create([
-            'phone' => '+31 20 123 4567',
+            'phone' => '+31 0000 000 00',
             'location' => 'Almere, Netherlands',
             'email' => 'admin@domain.com',
             'opening_hours' => json_encode($openingHours),
