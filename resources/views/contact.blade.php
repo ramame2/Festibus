@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="contact-section">
-        <h2>Contacteer Ons</h2>
+        <h2>Neem contact met ons op</h2>
         @if(session('success'))
             <p style="color: green;">{{ session('success') }}</p>
         @endif
