@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Boeking')
+@section('title', $departure . ' naar ' . $destination . ' reserveren' )
 @section('content')
     <div class="container">
         <div class="booking-section">

@@ -20,13 +20,13 @@
         <div class="admin-bar">
             <ul>
                 <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                <li><a href="{{ route('users.index') }}">Beheer Users</a></li>
-                <li><a href="{{ route('festivals.index') }}">Festivals</a></li>
-                <li><a href="{{ route('faq.index') }}"> FAQs</a></li>
-                <li><a href="{{ route('contacts.all') }}">Messages</a></li>
-                <li><a href="{{ route('feedback.view') }}">Feedback en reviews</a></li>
                 <li><a href="{{ route('booking.index') }}">Boekingen</a></li>
-                <li><a href="{{ route('news.index') }}">Nieuws Updaten</a></li>
+                <li><a href="{{ route('contacts.all') }}">Berichten</a></li>
+                <li><a href="{{ route('festivals.index') }}">Festivals</a></li>
+                <li><a href="{{ route('admin.users.index') }}">Beheer Users</a></li>
+                <li><a href="{{ route('faq.index') }}"> FAQs</a></li>
+                <li><a href="{{ route('feedback.view') }}">Reviews</a></li>
+                <li><a href="{{ route('news.index') }}">Nieuws</a></li>
             </ul>
         </div>
     @endif

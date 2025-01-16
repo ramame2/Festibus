@@ -1,8 +1,6 @@
 <header>
 
-    <div class="animated-bus-container">
-        <img src="{{ asset('images/gif.gif') }}" alt="Bewegende Bus" class="animated-bus">
-    </div>
+
     <nav>
         <div class="nav-left">
             @auth
@@ -46,5 +44,12 @@
                 <img src="{{ asset('images/fff.jpg') }}" alt="Logo" class="logo">
             </a>
         </div>
+
     </nav>
+
 </header>
+<body>
+<div class="animated-bus-container">
+    <img src="{{ asset('images/gif.gif') }}" alt="Bewegende Bus" class="animated-bus">
+</div>
+</body>

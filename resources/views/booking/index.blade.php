@@ -11,11 +11,11 @@
         @endif
 
 
-        <form method="GET" action="{{ route('booking.index') }}">
-            <div class="form-group">
-                <input type="text" name="search" class="form-control" placeholder="Zoek boekingen" value="{{ $search }}">
+        <form class="search-container" method="GET" action="{{ route('booking.index') }}">
+            <div class="search-container">
+                <input type="text" name="search" class="search-input" placeholder="Zoek boekingen" value="{{ $search }}">
             </div>
-            <button type="submit" class="buttons">Zoeken</button>
+            <button type="submit" class="btn-search">Zoeken</button>
         </form>
 
         <table class="table_profile">

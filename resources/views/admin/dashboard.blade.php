@@ -5,12 +5,12 @@
         <div class="col-md-12 text-center">
             <h1>Admin Dashboard</h1>
         </div>
-        <div class="container-home">
+        <div class="festival-gallery">
         <!-- Locaties Beheren Section -->
         <div class="dashboard-item">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('locations.index') }}" class="dashboard-btn"><h2>locaties Beheren</h2></a>
+                    <a href="{{ route('locations.index') }}" class="dashboard-btn"><h2>Locaties Beheren</h2></a>
                     <p class="card-text">Bekijk, bewerk of verwijder steden en stations.</p>
 
                 </div>
@@ -30,7 +30,7 @@
         <div class="dashboard-item">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('users.index') }}" class="dashboard-btn"><h2>Gebruikers Beheren</h2></a>
+                    <a href="{{ route('admin.users.index') }}" class="dashboard-btn"><h2>Gebruikers Beheren</h2></a>
                     <p class="card-text">Bekijk, bewerk of verwijder gebruikersaccounts in het systeem.</p>
 
                 </div>

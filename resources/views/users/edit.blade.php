@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Gebruiker')
+@section('title', $user->name . ' account bewerken' )
 @section('content')
     <div class="profile_container">
         @if(session('success'))
@@ -18,13 +18,20 @@
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $user->name) }}" required>
                 </div>
-
+                @if(auth()->check() && auth()->user()->role === 'admin')
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Rol</label>
+                        <select class="form-control" id="role" name="role" required>
+                            <option value="user" {{ old('role', $user->role) === 'user' ? 'selected' : '' }}>Gebruiker</option>
+                            <option value="admin" {{ old('role', $user->role) === 'admin' ? 'selected' : '' }}>Admin</option>
+                        </select>
+                    </div>
+                @endif
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email', $user->email) }}" required>
                 </div>
 
-                <h4>Wachtwoord wijzigen</h4>
 
                 <div class="mb-3">
                     <label for="current_password" class="form-label">Huidig wachtwoord</label>
@@ -40,6 +47,7 @@
                     <label for="new_password_confirmation" class="form-label">Bevestig nieuw wachtwoord</label>
                     <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation" >
                 </div>
+
 
                 <button type="submit" class="buttons">Update</button>
             </form>

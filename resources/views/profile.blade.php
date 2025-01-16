@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Profiel')
+@section('title',  $user->name . ' Profiel')
 @section('content')
 
 
@@ -7,7 +7,7 @@
     <div class="profile_container">
 
         <h2>Welkom, {{ optional(auth()->user())->name }}!</h2>
-        <a href="{{ route('user.edit', $user->id) }}" class="buttons">Beheer uw account</a>
+        <a href="{{ route('users.edit', $user->id) }}" class="buttons">Beheer uw account</a>
         <h3>Uw boekingen</h3>
         @if($bookings->isEmpty())
             <p>Nog geen boekingen. Ontdek nieuwe avonturen en reis naar uw favoriete festivals! Begin vandaag nog met het boeken van uw tickets en maak uw droomreis werkelijkheid.</p>

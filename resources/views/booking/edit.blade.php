@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Boeking')
+@section('title', 'Boeking van ' . $booking->name)
 @section('content')
     <div class="profile_container">
         <h2>Boeking Bewerken</h2>

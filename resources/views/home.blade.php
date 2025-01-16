@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Home')
+@section('title', 'Festibus')
 @if(session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
 @endif
@@ -22,7 +22,6 @@
                         <div class="news-item" style="display: none;">  <h3>Laatste Nieuws</h3>
                             <h4>{{ $item->title }}</h4>
                             <p>{{ Str::limit($item->content, 100) }} <a href="{{ route('news.show', $item->id) }}"></a></p>
-                            <H4>Alle detiles zijn op onze website.</H4>
                         </div>
                     @endforeach
                 </div>

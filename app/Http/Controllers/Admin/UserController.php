@@ -12,11 +12,11 @@ class UserController extends Controller
     public function index()
     {
         if (!auth()->check() || auth()->user()->role !== 'admin') {
-            return redirect()->route('home')->with('error', 'U bent niet bevoegd om deze gebruiker te bewerken.');
+            return redirect()->route('home')->with('error', 'U bent niet bevoegd om deze pagina te bezoeken.');
         }
 
         $users = User::all();
-        return view('users.index', compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     public function edit($id)
@@ -50,14 +50,14 @@ class UserController extends Controller
         ]);
 
         // Controleer het huidige wachtwoord als de gebruiker geen admin is
-        if ($currentUser->role !== 'admin' && $request->filled('current_password')) {
+        if ($currentUser->role !== 'admin') {
             if (!Hash::check($request->current_password, $user->password)) {
                 return back()->with('error', 'Uw huidige wachtwoord is onjuist.');
             }
         }
 
         // Update gebruikersgegevens
-        $user->update($request->only(['name', 'email']));
+        $user->update($request->only(['name', 'email','role']));
 
         // Update wachtwoord als een nieuw wachtwoord is ingevuld
         if ($request->filled('new_password')) {
@@ -101,4 +101,27 @@ class UserController extends Controller
 
         return back()->with('success', 'Wachtwoord succesvol gereset.');
     }
+    public function create()
+    {
+        return view('admin.users.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'role' => $request->role, // Optioneel, als je rollen toevoegt
+        ]);
+
+        return redirect()->route('users.index')->with('success', 'Gebruiker succesvol aangemaakt.');
+    }
+
 }

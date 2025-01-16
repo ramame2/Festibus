@@ -5,7 +5,7 @@
         <h2>Nieuws Management</h2>
 
         <form method="GET" action="{{ route('news.create') }}">
-            <button type="submit" class="btn btn-primary">Voeg nieuws toe</button>
+            <button type="submit" >Voeg nieuws toe</button>
         </form>
 
 

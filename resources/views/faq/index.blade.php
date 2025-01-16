@@ -7,10 +7,10 @@
 
 
 
-        <form method="GET" action="{{ route('faq.index') }}">
+        <form class="search-container" method="GET" action="{{ route('faq.index') }}">
         <input type="text" id="search-input" name="search" placeholder="Zoek FAQs" value="{{ request('search') }}">
 
-        <button type="submit">Zoek</button>
+        <button class="btn-search" type="submit">Zoeken</button>
         </form>
 
     <!-- FAQ List -->

@@ -1,41 +1,51 @@
-@extends('layouts.admin')
 
-@section('title', 'Gebruikersbeheer')
-
+@extends('layouts.app')
+@section('title', 'Gebruikers')
 @section('content')
-    <h2>Gebruikers beheren</h2>
+    <div class="profile_container">
+        <h2>Beheer Gebruikers</h2>
 
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
+        <div >
+            <a href="{{ route('users.create') }}" >
+                <i class="fas fa-user-plus"></i> Nieuwe Gebruiker
+            </a>
         </div>
-    @endif
-
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Naam</th>
-            <th>Email</th>
-            <th>Acties</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach ($users as $user)
+        <table class="table_profile">
+            <thead>
             <tr>
-                <td>{{ $user->id }}</td>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
-                <td>
-                    <a href="{{ route('admin.users.edit', $user->id) }}">Bewerken</a>
-                    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Verwijderen</button>
-                    </form>
-                </td>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Acties</th>
             </tr>
-        @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            @foreach($users as $user)
+                <tr>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->role }}</td>
+                    <td>
+                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Bewerken</a>
+                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Gebruiker verwijderen?')">Verwijderen</button>
+                        </form>
+
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
