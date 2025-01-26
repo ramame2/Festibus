@@ -9,12 +9,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            AboutInfoSeeder::class,
             NewsSeeder::class,
             FestivalSeeder::class,
             UserSeeder::class,
-            locationSeeder::class,
+            LocationSeeder::class,
             BusRoutesSeeder::class,
-            faqSeeder::class,
+            FaqSeeder::class,
+            PhotoSeeder::class,
 
         ]);
     }
